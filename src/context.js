@@ -6,7 +6,7 @@ const AppContext = React.createContext()
 export const AppProvider = ({ children }) => {
   // Setting Global States and Functions
   const [openSideBar, setOpenSidebar] = useState(false)
-  const [openMenu, setIsOpenMenu] = useState(true)
+  const [openMenu, setIsOpenMenu] = useState(false)
 
   const openSideBarHandler = () => {
     setOpenSidebar(true)

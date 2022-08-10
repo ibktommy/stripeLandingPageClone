@@ -25,8 +25,8 @@ export const AppProvider = ({ children }) => {
     setIsOpenMenu(true)
   }
 
-  const closeMenuhandler = () => {
-    setIsOpenMenu(true)
+  const closeMenuHandler = () => {
+    setIsOpenMenu(false)
   }
 
 
@@ -37,7 +37,7 @@ export const AppProvider = ({ children }) => {
       closeSideBarHandler,
       openMenu,
       openMenuHandler,
-      closeMenuhandler,
+      closeMenuHandler,
       location,
       page,
     }}>

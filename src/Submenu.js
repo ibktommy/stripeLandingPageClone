@@ -5,7 +5,7 @@ const Submenu = () => {
   const { openMenu } = useGlobalContext()
 
   return (
-    <aside className={`${openMenu ? 'submenu-show' : 'submenu'}`}>
+    <aside className={`${openMenu ? 'submenu show' : 'submenu'}`}>
       Submenu
     </aside>
   )

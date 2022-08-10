@@ -7,8 +7,12 @@ const Navbar = () => {
   const { openSideBarHandler, openMenuHandler, closeMenuHandler } = useGlobalContext()
 
   const displaySubMenu = (e) => {
-    console.log('Hello')
-    openMenuHandler()
+    const pageText = e.target.textContent
+    const navBtnPosition = e.target.getBoundingClientRect()
+    const center  = (navBtnPosition.left + navBtnPosition.right) / 2
+    const bottom = navBtnPosition.bottom -3
+
+    openMenuHandler(pageText, { center, bottom })
   }
   
   return (

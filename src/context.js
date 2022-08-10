@@ -7,6 +7,7 @@ export const AppProvider = ({ children }) => {
   // Setting Global States and Functions
   const [openSideBar, setOpenSidebar] = useState(false)
   const [openMenu, setIsOpenMenu] = useState(false)
+  const [location, setLocation] = useState({})
 
   const openSideBarHandler = () => {
     setOpenSidebar(true)
@@ -16,7 +17,8 @@ export const AppProvider = ({ children }) => {
     setOpenSidebar(false)
   }
 
-  const openMenuHandler = () => {
+  const openMenuHandler = (text, coordinates) => {
+    setLocation(coordinates)
     setIsOpenMenu(true)
   }
 
@@ -33,6 +35,7 @@ export const AppProvider = ({ children }) => {
       openMenu,
       openMenuHandler,
       closeMenuhandler,
+      location,
     }}>
       {children}
     </AppContext.Provider>

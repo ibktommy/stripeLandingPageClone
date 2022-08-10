@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { useGlobalContext } from './context'
 
 const Submenu = () => {
-  const { openMenu, location } = useGlobalContext()
+  const { openMenu, location, page: { page, links } } = useGlobalContext()
   const container = useRef(null)
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Submenu = () => {
 
   return (
     <aside className={`${openMenu ? 'submenu show' : 'submenu'}`} ref={container}>
-      Submenu
+      <h4>{page}</h4>
     </aside>
   )
 }

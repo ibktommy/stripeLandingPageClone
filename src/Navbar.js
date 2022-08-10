@@ -13,6 +13,8 @@ const Navbar = () => {
     const bottom = navBtnPosition.bottom -3
 
     openMenuHandler(pageText, { center, bottom })
+
+    console.log(pageText)
   }
   
   return (
@@ -27,17 +29,17 @@ const Navbar = () => {
         <ul className="nav-links">
           <li>
             <button className="link-btn" onMouseOver={displaySubMenu}>
-              Products
+              products
             </button>
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubMenu}>
-              Developer
+              developers
             </button>
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubMenu}>
-              Company
+              company
             </button>
           </li>
         </ul>

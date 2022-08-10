@@ -5,6 +5,7 @@ import phoneImg from './images/phone.svg'
 
 const Hero = () => {
   const { closeMenuHandler } = useGlobalContext()
+  
   return (
     <section className="hero">
       <div className="hero-center">
